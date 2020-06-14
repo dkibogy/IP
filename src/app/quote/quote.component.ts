@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output } from '@angular/core'
-import { Quotes} from '../quotes';
+import { Quote} from '../quotes';
 import { from } from 'rxjs'
 import { EventEmitter } from 'protractor';
 @Component({
@@ -9,10 +9,11 @@ import { EventEmitter } from 'protractor';
 })
 export class QuoteComponent implements OnInit {
 
-  @Input() quotes: Quotes;
-  likes=0;
-  dislikes=0;
+  @Input() quotes: Quote;
+  
 
+  upvotes=0;
+  downvotes=0;
   
 
   
