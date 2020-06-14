@@ -1,7 +1,7 @@
 <div class="container-fluid mb-5">
     <h1 class="text-center">Quote Input Form</h1>
     <!--Form starts here -->
-    <form>
+    <form (ngSubmit)='onSubmit()'>
         <div class="form-group">
             <label>Category</label><br>
             <input type="text" name="category" class="input" placeholder="quote category" [(ngModel)] ="category">

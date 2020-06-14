@@ -1,8 +1,22 @@
 <!--parent-->
-<div class="body">
-    <button (submit)= "addvote(i)">add</button>
-    <button (submit)= "removevote(i)">remove</button>
-    <button (submit)= "deletevote(i)">delete</button>
+<div class="card-body ">
 
+    <p>
+      category:{{category}}
+    </p>
+    <p>
+      Author:{{author}}
+    <p>
+       message:{{message}}
+    </p>
+    <p>
+      liked:{{likes}}
+    </p>
+    <p>
+      Dislikes:{{dislikes}}
+    </p>
+    <p>
+       Date {{Date|date}}
+      </p>
 
-</div>
+  </div>

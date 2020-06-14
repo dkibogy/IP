@@ -9,6 +9,12 @@ import { EventEmitter } from 'protractor';
 })
 export class QuoteComponent implements OnInit {
 
+  @Input() quotes: Quotes;
+  likes=0;
+  dislikes=0;
+
+  
+
   
 
   constructor() { }
