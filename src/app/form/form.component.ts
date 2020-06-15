@@ -13,15 +13,17 @@ export class FormComponent implements OnInit {
   message: string;
   date: number;
   name: string;
-  theWords: any
+  newQuote: any
 
 
   onSubmit(){
-    this.theWords = new Quote('','','','')
+    this.newQuote = new Quote('','','','')
     this.category=''
     this.author=''
     this.message=''
-    this.addQuote.emit(this.theWords)
+    this.date
+    
+    this.addQuote.emit(this.newQuote)
   }
 
 
