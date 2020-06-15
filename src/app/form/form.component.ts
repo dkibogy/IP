@@ -1,7 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output , EventEmitter} from '@angular/core';
 import { Quote} from '../quotes'
-import { from } from 'rxjs';
-import { EventEmitter } from 'protractor';
 
 @Component({
   selector: 'app-form',
@@ -9,19 +7,21 @@ import { EventEmitter } from 'protractor';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent implements OnInit {
-  @Output() emitQuote= new EventEmitter()
-  quoteWords:string
-  quoteEditor:string
-  quoteAuthor:string
-  quoteDate:number
-  theWords:any
+  @Output() addQuote= new EventEmitter()
+  category: string;
+  author: string;
+  message: string;
+  date: number;
+  name: string;
+  theWords: any
 
-  submitQuote(){
-    this.theWords = new Quote('','','')
-    this.quoteWords=''
-    this.quoteAuthor=''
-    this.quoteEditor=''
-    this.emitQuote.emit(this.theWords)
+
+  onSubmit(){
+    this.theWords = new Quote('','','','')
+    this.category=''
+    this.author=''
+    this.message=''
+    this.addQuote.emit(this.theWords)
   }
 
 

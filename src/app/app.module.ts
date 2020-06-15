@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { QuoteComponent } from './quote/quote.component';
 import { FormComponent } from './form/form.component';
+import { QuoteBodyComponent } from './quote-body/quote-body.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     QuoteComponent,
-    FormComponent
+    FormComponent,
+    QuoteBodyComponent
   ],
   imports: [
     BrowserModule,

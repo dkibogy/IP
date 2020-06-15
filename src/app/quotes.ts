@@ -1,10 +1,10 @@
 export class Quote {
   public upvotes:number
   public downvotes:number
-  public completeDate:Date
-  constructor(public name:string, public author:string,public quote:string){
+  public Date:Date
+  constructor(public category:string, public author:string,public message:string ,public name: string){
     this.upvotes =0;
     this.downvotes =0;
-    this.completeDate=new Date;
+    this.Date=new Date;
   }
 }
