@@ -9,8 +9,9 @@
         <p>category: {{quote.category}}</p>
         <p>author: {{quote.author}}</p>
         <p>quote: {{quote.message}}</p>
-        <p>publisher: {{quote.name}} on {{quote.date| dateCount}}</p>
-        <app-quote-body></app-quote-body>
+        <p>publisher: {{quote.name}}</p>
+        <h5 class="text-center">{{quote.date| date}}</h5>
+        <app-quote-body *ngIf='quote.showDetail' [quote]='quote' (complete)='hideQuote($event,i)'></app-quote-body>
       </div>
     </div>
     <div class="offset-1 col-5">

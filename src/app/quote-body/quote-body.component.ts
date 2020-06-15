@@ -15,15 +15,12 @@ export class QuoteBodyComponent implements OnInit {
   //]
 
   @Input() quote : Quote;
-  @Output() viewed = new EventEmitter<boolean>();
+  @Output() Complete = new EventEmitter<Boolean>();
 
   numberofupVotes: number = 0;
   numberofdownVotes: number = 0;
-
-  delete(isViewed:boolean){
-    this.viewed.emit(isViewed)
-  }
-
+  
+  
   upVote(){
     this.numberofupVotes++;
   }
@@ -31,7 +28,9 @@ export class QuoteBodyComponent implements OnInit {
     this.numberofdownVotes++;
   }
   
-  
+  delete(isComplete:boolean){
+    this.Complete.emit(isComplete);
+  }
 
 
   constructor() { }

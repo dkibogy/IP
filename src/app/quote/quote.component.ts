@@ -10,12 +10,22 @@ export class QuoteComponent implements OnInit {
 
   quotes: Quote[]  =[
     new Quote('Tech', "steve Jobs","Innovation distinguishes between a leader and a follower.", 'suzie',new Date(2020,6,13) ),
-    new Quote('love ','Dalai Lama',"love is the absense of judgement", "daisy", new Date(2020,6,13)),
+    new Quote('love ','Dalai Lama',"love is the absense of judgement", "daisy", new Date(2020,3,2)),
     new Quote('life', 'Oprah Winfrey', 'Think like a Queen. A queen who is not afraid to fail', 'jane', new Date(2012,6,13))
   ];
 
   newQuote(quote){
     this.quotes.push(quote)
+  }
+  
+  hideQuote(complete, index){
+    if(complete) {
+      let toHide = confirm(`Are you sure you want to delete quote?`)
+      
+      if (toHide){
+        this.quotes.splice(index,1);
+      }
+    }
   }
 
   
