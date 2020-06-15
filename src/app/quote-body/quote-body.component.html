@@ -1,15 +1,19 @@
-<div class="myQuote " *ngFor="let quote of quotes; let i=index">
-    <p appHighlight *ngIf="highestUpvote()===quote.upvotes && quote.upvotes>0">
-      {{quote.quote}}
 
-    </p>
-     <p *ngIf="highestUpvote()!==quote.upvotes || quote.upvotes===0">
-         {{quote.quote}}
-     </p>
+<div class="myQuote">
+    
+    <!--This is where the deets will come from-->
+    
 
-    <app-quote [quote]="quote"></app-quote>
-    <button class="btn btn-primary" (click)= "upvote(i)">Upvote </button>
-    <button class="btn btn-primary" (click)="downvote(i)">Downvote </button>
-    <button class="btn btn-danger" (click)="delQuote(i)">Delete</button>
+    <!--upvote, delete and downvote buttons-->
+    <button class="btn btn-primary" (click)= "upVote()">upVote
+      {{numberofupVotes}}
+    </button>
+
+    <button class="btn btn-primary" (click)="downVote()">Downvote
+      {{numberofdownVotes}}
+    </button>
+    <button class="btn btn-danger" (click)="delete(true)">Delete
+    
+    </button>  
 </div>
-<app-form (addQuote)="newQuote($event)"></app-form>
+

@@ -1,6 +1,21 @@
-<!--parent goal.components-->
-<div>
-  <h1>Quote App</h1>
-
-  <p>last updated on {{quotes.Date | dateCount}} </p>
+<!--parent goal.components assembling everthing-->
+<div class="container" id="penny">
+  <h2>Penny For your Quotes</h2>
+  
+  <br>
+  <div class="row">
+    <div class="col-6">
+      <div *ngFor='let quote of quotes; let i = index' class="card">
+        <p>category: {{quote.category}}</p>
+        <p>author: {{quote.author}}</p>
+        <p>quote: {{quote.message}}</p>
+        <p>publisher: {{quote.name}}</p>
+        <app-quote-body></app-quote-body>
+      </div>
+    </div>
+    <div class="offset-1 col-5">
+      <app-form (addQuote)="newQuote($event)"></app-form>
+    </div>
+  </div>
 </div>
+

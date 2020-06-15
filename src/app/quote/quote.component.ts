@@ -8,11 +8,18 @@ import { Quote} from '../quotes';
 })
 export class QuoteComponent implements OnInit {
 
-  @Input() quotes: Quote;
+  quotes: Quote[]  =[
+    new Quote('Tech', "steve Jobs","Innovation distinguishes between a leader and a follower.", 'suzie',new Date(2020,6,13) ),
+    new Quote('love ','Dalai Lama',"love is the absense of judgement", "daisy", new Date(2020,6,13)),
+    new Quote('life', 'Oprah Winfrey', 'Think like a Queen. A queen who is not afraid to fail', 'jane', new Date(2012,6,13))
+  ];
+
+  newQuote(quote){
+    this.quotes.push(quote)
+  }
+
   
 
-  upvotes=0;
-  downvotes=0;
   
 
   
