@@ -1,6 +1,25 @@
 # Quoti
 
+## Author
+
+Daisy Kibogy
+
+## Description
+
+an application where users can create quotes and have those quotes voted on whether they are terrible or are inspirational. 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.8.
+
+## Live Site
+
+## Technologies Used
+- Angular
+- HTML
+- CSS
+- Bootstrap
+- TypeScript
+
+
 
 ## Development server
 
