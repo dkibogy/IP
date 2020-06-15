@@ -12,3 +12,4 @@
     <button class="btn btn-primary" (click)="downvote(i)">Downvote </button>
     <button class="btn btn-danger" (click)="delQuote(i)">Delete</button>
 </div>
+<app-form (addQuote)="newQuote($event)"></app-form>
